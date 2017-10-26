@@ -4,6 +4,7 @@ var $androidQuan = $("#androidQuantity");
 var $iosQuan = $("#iosQuantity");
 $(document).ready(function (e) {
 
+    $('section-shoppingCart').hide();
     $("checkoutIOS").click(updateCartIos($iosQuan));
     $("checkoutAndroid").click(updateCartAndroid($androidQuan));
 
