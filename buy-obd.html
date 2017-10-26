@@ -1,21 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="grid.css">
-    <link rel="stylesheet" type="text/css" href="simple-grid.min.css">
+    <link rel="stylesheet" type="text/css" href="css/grid.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
-    <script src="product"></script>
+    <script src="purchase.js"></script>
+    <script src="jquery-3.2.1.min.js"></script>
     <meta charset="UTF-8">
     <title>Purchase Device</title>
 </head>
-<div class="header">
+<div class="header1">
     <header>
         <h1>Buy our Devices</h1>
     </header>
 </div>
-
-<body class="center">
-<div class="product">
+<section class="section-products">
+<div class="row">
+<div class="col span-1-of-2">
     <header>
         <h2>Android Device</h2>
     </header>
@@ -23,7 +23,8 @@
         <img src="src/buy-android.png">
     </figure>
     <p class="info1">Quantity</p>
-    <select class="quantity">
+    <select id="androidQuantity">
+        <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -33,11 +34,8 @@
     <div class="checkoutAndroid">
         <button>Buy Now</button>
     </div>
-    <script src="purchase.js">
-        updateCartAndroid()
-    </script>
 </div>
-<div class="product">
+    <div class="col span-1-of-2">
     <header>
         <h2>iOS Device</h2>
     </header>
@@ -45,7 +43,8 @@
         <img src="src/buy-ios.png">
     </figure>
     <p class="info1">Quantity</p>
-    <select class="quantity">
+    <select  id="iosQuantity">
+        <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="3">3</option>
@@ -57,7 +56,41 @@
         <button>Buy Now</button>
     </div>
 
+    </div>
+
 </div>
 
+</section>
+<section class="section-shoppingCart">
+    <div class="row">
+        <div class="col span-2-of-2">
+            <table id="prod", style="width:100%">
+                <tr id="titles" align="left">
+                    <th>Device Type</th>
+                    <th>Price</th>
+                    <th>Quantity </th>
+
+                </tr>
+                <tr id="android">
+                    <td id="androidProd">Engie device for Android</td>
+                    <td id="androidPrice">20$</td>
+                    <td id="androidNum">0</td>
+
+
+                </tr>
+                <tr id="ios">
+                    <td id="iosProd">Engie device for iPhone</td>
+                    <td id="iosPrice">25$</td>
+                    <td id="iosNum">0</td>
+                </tr>
+                <tr id="total">
+                    <td></td>
+                    <td></td>
+                    <td>Total:</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</section>
 </body>
 </html>
