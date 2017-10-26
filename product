@@ -1,0 +1,17 @@
+{
+  "products" : [
+    {
+      "product": "android",
+      "name": "Android Device",
+      "price":20,
+      "barcode":1234
+    },
+    {
+      "product": "ios",
+      "name": "iOS Device",
+      "price":25,
+      "barcode":9876
+    }
+  ]
+}
+
