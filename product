@@ -2,13 +2,13 @@
   "products" : [
     {
       "product": "android",
-      "name": "Android Device",
+      "name": "Engie device for Android",
       "price":20,
       "barcode":1234
     },
     {
       "product": "ios",
-      "name": "iOS Device",
+      "name": "Engie device for iPhone",
       "price":25,
       "barcode":9876
     }
