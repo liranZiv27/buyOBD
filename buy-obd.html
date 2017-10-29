@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="javascript/purchase.js"></script>
     <link rel="stylesheet" type="text/css" href="css/grid.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
-    <script src="purchase.js"></script>
-    <script src="jquery-3.2.1.min.js"></script>
     <meta charset="UTF-8">
     <title>Purchase Device</title>
 </head>
@@ -20,7 +21,7 @@
         <h2>Android Device</h2>
     </header>
     <figure>
-        <img src="src/buy-android.png">
+        <img class="pic" src="src/buy-android.png">
     </figure>
     <p class="info1">Quantity</p>
     <select id="androidQuantity">
@@ -31,7 +32,7 @@
         <option value="4">4</option>
         <option value="5">5</option>
     </select>
-    <div class="checkoutAndroid">
+    <div id="checkoutAndroid">
         <button>Buy Now</button>
     </div>
 </div>
@@ -40,7 +41,7 @@
         <h2>iOS Device</h2>
     </header>
     <figure>
-        <img src="src/buy-ios.png">
+        <img class="pic" src="src/buy-ios.png">
     </figure>
     <p class="info1">Quantity</p>
     <select  id="iosQuantity">
@@ -52,7 +53,7 @@
         <option value="5">5</option>
     </select>
 
-    <div class="checkoutIOS">
+    <div id="checkoutIOS">
         <button>Buy Now</button>
     </div>
 
@@ -74,14 +75,14 @@
                 <tr id="android">
                     <td id="androidProd">Engie device for Android</td>
                     <td id="androidPrice">20$</td>
-                    <td id="androidNum">0</td>
+                    <td id="androidNum"></td>
 
 
                 </tr>
                 <tr id="ios">
                     <td id="iosProd">Engie device for iPhone</td>
                     <td id="iosPrice">25$</td>
-                    <td id="iosNum">0</td>
+                    <td id="iosNum"></td>
                 </tr>
                 <tr id="total">
                     <td></td>
