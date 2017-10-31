@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://gitcdn.link/repo/Chalarangelo/mini.css/master/dist/mini-default.min.css">
     <script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="javascript/purchase.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/grid.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
     <meta charset="UTF-8">
     <title>Purchase Device</title>
@@ -14,29 +13,36 @@
         <h1>Buy Our Devices</h1>
     </header>
 </div>
+< class="container">
+
 <section class="section-products">
 <div class="row">
-<div class="col span-1-of-2">
+<div class="col-sm-6 col-md-6">
     <header>
         <h2>Android Device</h2>
     </header>
+    <div class="col-md-12">
     <figure>
         <img class="pic" src="src/buy-android.png">
     </figure>
-    <p class="info1">Quantity</p>
-    <select id="androidQuantity">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-    <div id="checkoutAndroid">
-        <button>Buy Now</button>
+    <div class = "product-info">
+        <p class="info1">Quantity</p>
+        <label for="androidQuantity" class="visuallyhidden">How Many</label>
+        <select id="androidQuantity">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        <div id="checkoutAndroid">
+            <button>Buy Now</button>
+        </div>
     </div>
 </div>
-    <div class="col span-1-of-2">
+</div>
+    <div class="col-sm-6 col-md-6">
     <header>
         <h2>iOS Device</h2>
     </header>
@@ -44,7 +50,8 @@
         <img class="pic" src="src/buy-ios.png">
     </figure>
     <p class="info1">Quantity</p>
-    <select  id="iosQuantity">
+        <label for="iosQuantity" class="visuallyhidden">How Many</label>
+        <select  id="iosQuantity">
         <option value="0">0</option>
         <option value="1">1</option>
         <option value="2">2</option>
@@ -56,28 +63,22 @@
     <div id="checkoutIOS">
         <button>Buy Now</button>
     </div>
-
     </div>
-
 </div>
-
 </section>
 <section class="section-shoppingCart">
     <div class="row">
-        <div class="col span-2-of-2">
-            <table id="prod", style="width:100%">
+        <div class="col-sm-6 col-md-12">
+            <table id="product" style="width:100%">
                 <tr id="titles" align="left">
                     <th>Device Type</th>
                     <th>Price</th>
                     <th>Quantity </th>
-
                 </tr>
                 <tr id="android">
                     <td id="androidProd">Engie device for Android</td>
                     <td id="androidPrice">20$</td>
                     <td id="androidNum"></td>
-
-
                 </tr>
                 <tr id="ios">
                     <td id="iosProd">Engie device for iPhone</td>
@@ -87,11 +88,10 @@
                 <tr id="total">
                     <td></td>
                     <td></td>
-                    <td>Total:</td>
+                    <td id="totalTotal"><b>Total:</b></td>
                 </tr>
             </table>
         </div>
     </div>
 </section>
-</body>
 </html>

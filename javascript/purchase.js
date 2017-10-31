@@ -4,38 +4,30 @@ $(function () {
 
     $(".section-shoppingCart").hide();
 
-    $('#checkoutAndroid').click(function () {
-        var quan = $('#androidQuantity').val();
-        var totalPrice = 0;
-        if (quan > 1)
-            totalPrice = ((20 * 0.75) + (20 * (quan - 1)));
-        else if (quan == 1)
-            totalPrice = 20;
-        else
-            totalPrice = 0;
+    $("#checkoutAndroid").click(checkout);
+    $("#checkoutIOS").click(checkout);
+
+    function checkout() {
+        var androidQuantity = $("#androidQuantity").val();
+        var iosQuantity = $("#iosQuantity").val();
+
+        var androidTotalPrice = calcPrice(androidQuantity, 20);
+        var iosTotalPrice = calcPrice(iosQuantity, 25);
+        var totalPrice = androidTotalPrice + iosTotalPrice;
+
         $(".section-shoppingCart").show();
-        $("#androidNum").attr($(quan));
-        $("#total").attr(totalPrice);
-    });
+        $("#iosNum").text(iosQuantity);
+        $("#androidNum").text(androidQuantity);
+        $("#totalTotal").text("Total: " + (totalPrice) + "$");
 
-
-    $('#checkoutIOS').click(updateCartIos($("#iosQuantity")));
-
-    function updateCartAndroid(quantity) {
-        var totalPrice = 0;
-        if (quantity > 1) {
-            totalPrice = ((20 * 0.75) + (20 * (quantity - 1)));
-        }
-        else {
-            totalPrice = 20;
-        }
     }
-    function updateCartIos(quantity) {
-        var totalPrice = 0;
-        if (quantity > 1)
-            totalPrice = ((25 * 0.75) + (25 * (quantity - 1)));
+    function calcPrice(amount, price) {
+        if (amount > 1)
+            return (price* 0.75) + (price * (amount - 1));
+        else if(amount == 1)
+            return price;
         else
-            totalPrice = 25;
+            return 0;
     }
-
 });
+
