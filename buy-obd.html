@@ -5,67 +5,68 @@
     <script type="text/javascript" src="javascript/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="javascript/purchase.js"></script>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <meta charset="UTF-8">
     <title>Purchase Device</title>
 </head>
-<div class="header1" align="center">
+<div class="header1">
     <header>
         <h1>Buy Our Devices</h1>
     </header>
 </div>
-< class="container">
-
+<div class="container">
 <section class="section-products">
 <div class="row">
-<div class="col-sm-6 col-md-6">
+<div class="col-md-6">
     <header>
         <h2>Android Device</h2>
     </header>
-    <div class="col-md-12">
-    <figure>
-        <img class="pic" src="src/buy-android.png">
-    </figure>
-    <div class = "product-info">
-        <p class="info1">Quantity</p>
-        <label for="androidQuantity" class="visuallyhidden">How Many</label>
-        <select id="androidQuantity">
-            <option value="0">0</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-        <div id="checkoutAndroid">
-            <button>Buy Now</button>
+        <figure>
+            <img class="pic" src="src/buy-android.png">
+        </figure>
+        <div class = "product-info">
+            <p class="info1">Quantity</p>
+            <label for="androidQuantity" class="visuallyhidden">How Many</label>
+            <select id="androidQuantity">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div id="checkoutAndroid">
+                <button>Buy Now</button>
+            </div>
         </div>
     </div>
-</div>
-</div>
-    <div class="col-sm-6 col-md-6">
+
+    <div class="col-md-6">
     <header>
         <h2>iOS Device</h2>
     </header>
     <figure>
         <img class="pic" src="src/buy-ios.png">
     </figure>
-    <p class="info1">Quantity</p>
-        <label for="iosQuantity" class="visuallyhidden">How Many</label>
-        <select  id="iosQuantity">
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-    </select>
-
-    <div id="checkoutIOS">
-        <button>Buy Now</button>
-    </div>
+        <div class = "product-info">
+            <p class="info1">Quantity</p>
+            <label for="iosQuantity" class="visuallyhidden">How Many</label>
+            <select  id="iosQuantity">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+            <div id="checkoutIOS">
+                <button>Buy Now</button>
+            </div>
+        </div>
     </div>
 </div>
 </section>
+</div>
 <section class="section-shoppingCart">
     <div class="row">
         <div class="col-sm-6 col-md-12">
@@ -74,24 +75,29 @@
                     <th>Device Type</th>
                     <th>Price</th>
                     <th>Quantity </th>
+                    <th></th>
                 </tr>
                 <tr id="android">
                     <td id="androidProd">Engie device for Android</td>
                     <td id="androidPrice">20$</td>
                     <td id="androidNum"></td>
+                    <td class="clearAndroid"><button>Clear</button></td>
                 </tr>
                 <tr id="ios">
                     <td id="iosProd">Engie device for iPhone</td>
                     <td id="iosPrice">25$</td>
                     <td id="iosNum"></td>
+                    <td class="clearIos"><button>Clear</button></td>
                 </tr>
                 <tr id="total">
                     <td></td>
                     <td></td>
                     <td id="totalTotal"><b>Total:</b></td>
+                    <td></td>
                 </tr>
             </table>
         </div>
+        <button id="hide">Hide</button>
     </div>
 </section>
 </html>

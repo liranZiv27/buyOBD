@@ -1,0 +1,30 @@
+.col-md-6{
+       display: block;
+}
+.container{
+    margin-top: 10px;
+
+}
+.header1{
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+h2{
+    text-align: center;
+    margin: auto;
+}
+.pic{
+    display: block;
+    margin: auto;
+    width: 149px;
+    height: 111px;
+    object-fit: fill;
+}
+.product-info{
+    text-align: center;
+    margin: 10px;
+}
+#hide{
+    margin-left: auto;
+}
